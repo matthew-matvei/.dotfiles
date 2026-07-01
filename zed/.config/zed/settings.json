@@ -41,6 +41,7 @@
   },
   "mouse_wheel_zoom": true,
   "which_key": {
+    "delay_ms": 500,
     "enabled": true
   },
   "autosave": "on_focus_change",
@@ -49,13 +50,14 @@
   "icon_theme": {
     "mode": "system",
     "light": "Zed (Default)",
-    "dark": "Zed (Default)"
+    "dark": "JetBrains New UI Icons (Dark)"
   },
   "restore_on_startup": "launchpad",
   "collaboration_panel": {
     "button": false
   },
   "status_bar": {
+    "active_language_button": false,
     "active_encoding_button": "disabled"
   },
   "vim_mode": true,
