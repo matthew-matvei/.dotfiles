@@ -8,15 +8,13 @@
 [
   {
     "context": "Workspace",
-    "bindings": {
-      "space f f": "file_finder::Toggle",
-      "space e": "project_panel::Toggle",
-    },
+    "bindings": {},
   },
   {
     "context": "Editor && vim_mode == insert",
     "bindings": {
-      // "j k": "vim::NormalBefore"
+      "space f f": "file_finder::Toggle",
+      "space e": "project_panel::Toggle",
     },
   },
 ]
