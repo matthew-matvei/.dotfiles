@@ -11,10 +11,15 @@
     "bindings": {},
   },
   {
-    "context": "Editor && vim_mode == insert",
+    "context": "VimControl && vim_mode == normal",
     "bindings": {
       "space f f": "file_finder::Toggle",
-      "space e": "project_panel::Toggle",
+      "space e": "pane::RevealInProjectPanel",
+      "space b d": "pane::CloseActiveItem",
+      "space g b": "git::Branch",
+      "space g g": "git_panel::ToggleFocus",
+      "space h": "editor::ToggleInlayHints",
+      "space c a": "editor::ToggleCodeActions",
     },
   },
 ]
