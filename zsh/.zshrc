@@ -66,10 +66,6 @@ alias suggest='gh copilot --prompt'
 alias explain='gh copilot --prompt'
 alias co='copilot'
 
-# Shell integrations
-eval "$(fzf --zsh)"
-eval "$(zoxide init --cmd cd zsh)"
-
 # fnm (fast Node version manager — replaces nvm)
 eval "$(fnm env --use-on-cd --shell zsh)"
 
@@ -110,3 +106,7 @@ esac
 source /opt/homebrew/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 export PATH="$HOME/.local/bin:$PATH"
+
+# Shell integrations
+eval "$(fzf --zsh)"
+eval "$(zoxide init --cmd cd zsh)"
