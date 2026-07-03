@@ -14,12 +14,24 @@
     "context": "VimControl && vim_mode == normal",
     "bindings": {
       "space f f": "file_finder::Toggle",
-      "space e": "pane::RevealInProjectPanel",
+      "cmd-e": "pane::RevealInProjectPanel",
       "space b d": "pane::CloseActiveItem",
       "space g b": "git::Branch",
       "space g g": "git_panel::ToggleFocus",
       "space h": "editor::ToggleInlayHints",
       "space c a": "editor::ToggleCodeActions",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "bindings": {
+      "space b a": "pane::CloseAllItems",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w ctrl-a": "pane::CloseAllItems",
     },
   },
 ]
