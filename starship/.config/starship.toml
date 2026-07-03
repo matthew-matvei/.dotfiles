@@ -3,19 +3,19 @@
 continuation_prompt = '▶▶ '
 
 format = """
-[ ](peach)\
+[ ](sapphire)\
 $directory\
-[](bg:yellow fg:peach)\
+[](bg:lavender fg:sapphire)\
 $git_branch\
 $git_status\
-[ ](fg:yellow)\
+[ ](fg:lavender)\
 $line_break\
 $character"""
 
 palette = 'catppuccin_mocha'
 
 [directory]
-style = "bg:peach fg:crust"
+style = "bg:sapphire fg:crust"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -30,11 +30,11 @@ truncation_symbol = "…/"
 [git_branch]
 symbol = ""
 style = "bg:yellow"
-format = '[[ $symbol $branch ](fg:crust bg:yellow)]($style)'
+format = '[[ $symbol $branch ](fg:crust bg:lavender)]($style)'
 
 [git_status]
 style = "bg:yellow"
-format = '[[($all_status$ahead_behind )](fg:crust bg:yellow)]($style)'
+format = '[[($all_status$ahead_behind )](fg:crust bg:lavender)]($style)'
 
 [nodejs]
 disabled = true
