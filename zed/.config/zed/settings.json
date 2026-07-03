@@ -7,6 +7,17 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "auto_update_extensions": {
+    "csharp": false
+  },
+  "edit_predictions": {
+    "provider": "copilot"
+  },
+  "git": {
+    "inline_blame": {
+      "show_commit_summary": true
+    }
+  },
   "proxy": "",
   "git_panel": {
     "show_count_badge": true
@@ -21,7 +32,7 @@
     "git_status": true
   },
   "file_finder": {
-    "modal_max_width": "medium"
+    "modal_max_width": "large"
   },
   "prettier": {
     "allowed": true
@@ -31,6 +42,7 @@
   "semantic_tokens": "combined",
   "code_lens": "menu",
   "inlay_hints": {
+    "show_type_hints": false,
     "enabled": true
   },
   "always_treat_brackets_as_autoclosed": true,
