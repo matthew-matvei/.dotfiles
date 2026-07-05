@@ -23,7 +23,7 @@
     },
   },
   {
-    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "context": "(VimControl && !menu) || (!Editor && !Terminal) && vim_mode == normal",
     "bindings": {
       "space b a": "pane::CloseAllItems",
     },
@@ -37,25 +37,95 @@
   {
     "context": "(vim_mode == helix_normal || vim_mode == helix_select) && !menu",
     "bindings": {
-      "space f f": "file_finder::Toggle"
-    }
+      "space f f": "file_finder::Toggle",
+    },
   },
   {
     "context": "(vim_mode == helix_normal || vim_mode == helix_select) && !menu",
     "unbind": {
-      "space f": "file_finder::Toggle"
-    }
+      "space f": "file_finder::Toggle",
+    },
   },
   {
     "context": "!Editor && !Terminal",
     "bindings": {
-      "space f f": "file_finder::Toggle"
-    }
+      "space f f": "file_finder::Toggle",
+    },
   },
   {
     "context": "!Editor && !Terminal",
     "unbind": {
-      "space f": "file_finder::Toggle"
+      "space f": "file_finder::Toggle",
+    },
+  },
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "g r": "editor::FindAllReferences",
+    },
+  },
+  {
+    "context": "VimControl && !menu",
+    "unbind": {
+      "g r r": "editor::FindAllReferences",
+    },
+  },
+  {
+    "context": "Pane && vim_mode == normal",
+    "bindings": {
+      "space b o": [
+        "pane::CloseOtherItems",
+        {
+          "close_pinned": false
+        }
+      ],
+    },
+  },
+  {
+    "context": "Pane",
+    "unbind": {
+      "alt-cmd-t": [
+        "pane::CloseOtherItems",
+        {
+          "close_pinned": false,
+        },
+      ],
+    },
+  },
+  {
+    "context": "Workspace && vim_mode == normal",
+    "bindings": {
+      "space s g": "pane::DeploySearch",
+    },
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "cmd-shift-f": "pane::DeploySearch",
+    },
+  },
+  {
+    "context": "Pane && vim_mode == normal",
+    "bindings": {
+      "space s g": "pane::DeploySearch",
+    },
+  },
+  {
+    "context": "Pane",
+    "unbind": {
+      "cmd-shift-f": "pane::DeploySearch",
+    },
+  },
+  {
+    "context": "Editor && extension == md && vim_mode == normal",
+    "bindings": {
+      "space g p": "markdown::OpenPreviewToTheSide"
+    }
+  },
+  {
+    "context": "Editor && extension == md",
+    "unbind": {
+      "cmd-k v": "markdown::OpenPreviewToTheSide"
     }
   }
 ]
