@@ -65,6 +65,13 @@ alias cat='bat'
 alias suggest='gh copilot --prompt'
 alias explain='gh copilot --prompt'
 alias co='copilot'
+alias ga='git add'
+alias gc='git commit'
+alias gco='git checkout'
+alias gf='git fetch'
+alias gp='git pull'
+alias gP='git push'
+alias gs='git status'
 
 # fnm (fast Node version manager — replaces nvm)
 eval "$(fnm env --use-on-cd --shell zsh)"
