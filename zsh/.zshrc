@@ -72,6 +72,7 @@ alias gf='git fetch'
 alias gp='git pull'
 alias gP='git push'
 alias gs='git status'
+alias standup='git standup -s'
 
 # fnm (fast Node version manager — replaces nvm)
 eval "$(fnm env --use-on-cd --shell zsh)"
