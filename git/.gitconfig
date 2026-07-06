@@ -1,0 +1,63 @@
+[user]
+	name = Matthew James
+	email = matthew.james@shift.com.au
+[core]
+  compression = 9
+  whitespace = error
+[alias]
+	a		= add
+	c     		= commit
+	s      		= status
+	co     		= checkout
+	b     		= branch
+	m     		= merge
+	f     		= fetch --prune
+	l      		= log --oneline --decorate --graph
+	r		= rebase
+	pp		= push
+	p		= pull
+	merge-latest 	= pull origin master --no-ff
+	branches-for-cleaning = !git f && git b -vv | grep ': gone]' | awk '{print $1}'
+	clean-branches 	= !git branches-for-cleaning | xargs git b -D
+	current-branch 	= rev-parse --abbrev-ref HEAD
+	copy-current-branch = !git current-branch | tr -d '\n' | pbcopy
+[status]
+  showUntrackedFiles = all
+[diff]
+  context = 3
+  interHunkContext = 10
+[push]
+	autoSetupRemote = true
+[interactive]
+  singlekey = true
+[log]
+  abbrevCommit = true
+  graphColors = blue,yellow,cyan,magenta,green,red
+[color "decorate"]
+  HEAD = red
+  branch = blue
+  tag = yellow
+  remoteBranch = magenta
+[credential]
+	helper = osxkeychain
+	helper = 
+	helper = /usr/local/share/gcm-core/git-credential-manager
+[core]
+	editor = vim
+	autocrlf = input
+	pager = hunk pager
+[pull]
+	ff = only
+[fetch]
+	prune = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[rerere]
+	enabled = true
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+[diff]
+	tool = hunk
