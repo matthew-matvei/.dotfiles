@@ -76,8 +76,8 @@
       "space b o": [
         "pane::CloseOtherItems",
         {
-          "close_pinned": false
-        }
+          "close_pinned": false,
+        },
       ],
     },
   },
@@ -111,6 +111,12 @@
     },
   },
   {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "space s g": "pane::DeploySearch",
+    },
+  },
+  {
     "context": "Pane",
     "unbind": {
       "cmd-shift-f": "pane::DeploySearch",
@@ -119,13 +125,37 @@
   {
     "context": "Editor && extension == md && vim_mode == normal",
     "bindings": {
-      "space g p": "markdown::OpenPreviewToTheSide"
-    }
+      "space g p": "markdown::OpenPreviewToTheSide",
+    },
   },
   {
     "context": "Editor && extension == md",
     "unbind": {
-      "cmd-k v": "markdown::OpenPreviewToTheSide"
+      "cmd-k v": "markdown::OpenPreviewToTheSide",
+    },
+  },
+  {
+    "context": "!Editor && !Terminal",
+    "bindings": {
+      "space s g": "pane::DeploySearch"
+    }
+  },
+  {
+    "context": "!Editor && !Terminal",
+    "unbind": {
+      "space /": "pane::DeploySearch"
+    }
+  },
+  {
+    "context": "(vim_mode == helix_normal || vim_mode == helix_select) && !menu",
+    "bindings": {
+      "space s g": "pane::DeploySearch"
+    }
+  },
+  {
+    "context": "(vim_mode == helix_normal || vim_mode == helix_select) && !menu",
+    "unbind": {
+      "space /": "pane::DeploySearch"
     }
   }
 ]
