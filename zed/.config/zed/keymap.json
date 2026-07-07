@@ -17,7 +17,7 @@
       "cmd-e": "pane::RevealInProjectPanel",
       "space b d": "pane::CloseActiveItem",
       "space g b": "git::Branch",
-      "cmd-g": "git_panel::ToggleFocus",
+      "space g g": "git_panel::ToggleFocus",
       "space h": "editor::ToggleInlayHints",
       "space c a": "editor::ToggleCodeActions",
     },
