@@ -21,6 +21,7 @@
 	clean-branches 	= !git branches-for-cleaning | xargs git b -D
 	current-branch 	= rev-parse --abbrev-ref HEAD
 	copy-current-branch = !git current-branch | tr -d '\n' | pbcopy
+  standup = log --all --abbrev-commit --graph --pretty=oneline --since yesterday --author='Matthew James'
 [status]
   showUntrackedFiles = all
 [diff]
