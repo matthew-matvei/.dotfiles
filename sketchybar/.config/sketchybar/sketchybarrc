@@ -81,6 +81,7 @@ sketchybar --add event input_source_changed com.apple.Carbon.TISNotifySelectedKe
 
 sketchybar --add item clock right \
            --set clock update_freq=10 script="$PLUGIN_DIR/clock.sh" \
+           --set clock click_script="osascript -e 'tell application \"System Events\" to tell process \"ControlCenter\" to click menu bar item 2 of menu bar 1'" \
            --add item volume right \
            --set volume script="$PLUGIN_DIR/volume.sh" label.drawing=off \
                         popup.background.drawing=on \
@@ -106,9 +107,6 @@ sketchybar --add item clock right \
            --add item keyboard_layout right \
            --set keyboard_layout script="$PLUGIN_DIR/keyboard_layout.sh" \
            --subscribe keyboard_layout input_source_changed \
-           --add item control_centre right \
-           --set control_centre icon=􀥠 click_script="osascript -e 'tell application \"System Events\" to tell process \"ControlCenter\" to click menu bar item 2 of menu bar 1'"
-           # control_centre opens the macOS Control Center popup
 
 ##### Force all scripts to run the first time (never do this in a script) #####
 sketchybar --update
