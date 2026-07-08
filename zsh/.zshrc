@@ -78,6 +78,8 @@ alias gl='git log --all --graph --since="1 week ago" --pretty=format:"%C(magenta
 alias gf='git fetch'
 alias gash='gh dash'
 alias x='exit'
+alias gb='git branch'
+alias gm='git merge'
 
 # fnm (fast Node version manager — replaces nvm)
 eval "$(fnm env --use-on-cd --shell zsh)"
