@@ -17,4 +17,5 @@ if [ "$SENDER" = "volume_change" ]; then
   esac
 
   sketchybar --set "$NAME" icon="$ICON"
+  sketchybar --set volume_slider slider.percentage="$VOLUME"
 fi

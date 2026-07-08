@@ -83,7 +83,23 @@ sketchybar --add item clock right \
            --set clock update_freq=10 script="$PLUGIN_DIR/clock.sh" \
            --add item volume right \
            --set volume script="$PLUGIN_DIR/volume.sh" label.drawing=off \
+                        popup.background.drawing=on \
+                        popup.background.color=0xaa000000 \
+                        popup.background.corner_radius=6 \
+                        popup.background.border_width=1 \
+                        popup.background.border_color=0xff3d3d3d \
+                        click_script="sketchybar --set volume popup.drawing=toggle" \
            --subscribe volume volume_change \
+           --add slider volume_slider popup.volume \
+           --set volume_slider slider.width=100 slider.percentage=50 \
+                               slider.background.height=6 \
+                               slider.background.color=0xff3d3d3d \
+                               slider.background.corner_radius=3 \
+                               slider.highlight_color=0xffffffff \
+                               slider.knob="●" \
+                               script="$PLUGIN_DIR/volume_slider.sh" \
+                               updates=on \
+           --subscribe volume_slider mouse.clicked \
            --add item battery right \
            --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh" \
            --subscribe battery system_woke power_source_change \
