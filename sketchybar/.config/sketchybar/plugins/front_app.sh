@@ -6,5 +6,9 @@
 # https://felixkratz.github.io/SketchyBar/config/events#events-and-scripting
 
 if [ "$SENDER" = "front_app_switched" ]; then
-  sketchybar --set "$NAME" label="$INFO"
+  APP="$INFO"
+else
+  APP=$(osascript -e 'tell application "System Events" to get name of first process whose frontmost is true')
 fi
+
+sketchybar --set "$NAME" background.image="app.$APP"
