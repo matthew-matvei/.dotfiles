@@ -92,6 +92,8 @@ export EDITOR=nvim
 
 export HOMEBREW_NO_ENV_HINTS=1
 
+export XDG_CONFIG_HOME=/Users/matthew.james/.config
+
 # Auto-upgrade Homebrew packages on first shell of each Monday
 if [[ "$(date +%u)" -eq 1 ]]; then
   _brew_stamp="${XDG_CACHE_HOME:-$HOME/.cache}/brew-weekly-upgrade"

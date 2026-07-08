@@ -88,3 +88,27 @@ sketchybar --add item clock right \
 
 ##### Force all scripts to run the first time (never do this in a script) #####
 sketchybar --update
+
+##### I figured out these Control Centre widgets
+#[
+#        "Control Centre,Clock(1)",
+#        "Control Centre,BentoBox-0(2)", // general utility popup, very useful
+#        "Control Centre,WiFi(3)",
+#        "Control Centre,Battery(4)",
+#        "Control Centre,Item-0(5)", // keyboard layout indicator, might be nice sometimes
+#        "Control Centre,Item-0(6)", // Jetbrains toolbox
+#        "Karabiner-NotificationWindow,(7)", // Outlook meetings notification
+#        "Karabiner-NotificationWindow,(8)", // Or maybe this is the Outlook meetings notifications
+#        "Control Centre,Item-0(9)", // Maybe part of 'hiddenbar'
+#        "Control Centre,hiddenbar_expandcollapse(10)", // 'hiddenbar'
+#        "Shortcat,(11)",
+#        "BetterDisplay,(12)",
+#        "Control Centre,hiddenbar_separate(13)",
+#        "Control Centre,Item-0(14)",
+#        "Control Centre,Item-0(15)",
+#        "Control Centre,Item-0(16)",
+#        "Control Centre,Item-0(17)",
+#        "Control Centre,raycastIcon(18)",
+#        "Control Centre,Item-0(19)",
+#        "Control Centre,Item-0(20)"
+#]
