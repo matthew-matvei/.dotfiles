@@ -1,0 +1,14 @@
+{
+  "theme": "default",
+  "allowedUrls": [
+    "https://github.com",
+    "https://xunit.net",
+    "https://www.nuget.org",
+    "https://raw.githubusercontent.com",
+    "https://graph.microsoft.com"
+  ],
+  "enabledPlugins": {
+    "lsp@shift-payments-marketplace": true
+  },
+  "model": "auto"
+}
