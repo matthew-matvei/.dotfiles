@@ -20,9 +20,12 @@ case "${PERCENTAGE}" in
 esac
 
 if [[ "$CHARGING" != "" ]]; then
-  ICON=""
+  sketchybar --set "$NAME" icon="" label="${PERCENTAGE}%" \
+                            icon.color=0xffffffff label.color=0xffffffff
+elif [[ "$PERCENTAGE" -lt 25 ]]; then
+  sketchybar --set "$NAME" icon="$ICON" label="${PERCENTAGE}%" \
+                            icon.color=0xffff0000 label.color=0xffff0000
+else
+  sketchybar --set "$NAME" icon="$ICON" label="${PERCENTAGE}%" \
+                            icon.color=0xffffffff label.color=0xffffffff
 fi
-
-# The item invoking this script (name $NAME) will get its icon and label
-# updated with the current battery status
-sketchybar --set "$NAME" icon="$ICON" label="${PERCENTAGE}%"
