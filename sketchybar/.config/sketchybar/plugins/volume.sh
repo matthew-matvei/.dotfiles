@@ -6,6 +6,12 @@
 if [ "$SENDER" = "volume_change" ]; then
   VOLUME="$INFO"
 
+  if [ "$VOLUME" -eq 0 ]; then
+    sketchybar --set "$NAME" drawing=off
+    sketchybar --set volume_slider drawing=off
+    exit 0
+  fi
+
   case "$VOLUME" in
     [6-9][0-9]|100) ICON="󰕾"
     ;;
@@ -16,6 +22,6 @@ if [ "$SENDER" = "volume_change" ]; then
     *) ICON="󰖁"
   esac
 
-  sketchybar --set "$NAME" icon="$ICON"
-  sketchybar --set volume_slider slider.percentage="$VOLUME"
+  sketchybar --set "$NAME" icon="$ICON" drawing=on
+  sketchybar --set volume_slider slider.percentage="$VOLUME" drawing=on
 fi

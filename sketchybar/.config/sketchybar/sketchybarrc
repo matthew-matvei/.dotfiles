@@ -89,7 +89,7 @@ sketchybar --add item clock right \
            --set clock update_freq=10 script="$PLUGIN_DIR/clock.sh" \
            --set clock click_script="osascript -e 'tell application \"System Events\" to tell process \"ControlCenter\" to click menu bar item 2 of menu bar 1'" \
            --add item volume right \
-           --set volume script="$PLUGIN_DIR/volume.sh" label.drawing=off \
+           --set volume script="$PLUGIN_DIR/volume.sh" label.drawing=off drawing=off \
                         popup.background.drawing=on \
                         popup.background.color=0xaa000000 \
                         popup.background.corner_radius=6 \
