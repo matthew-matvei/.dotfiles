@@ -86,8 +86,8 @@ sketchybar --add item clock right \
            --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh" \
            --subscribe battery system_woke power_source_change \
            --add item control_centre right \
-           # This one is more like the notification tray
            --set control_centre icon=􀥠 click_script="osascript -e 'tell application \"System Events\" to tell process \"ControlCenter\" to click menu bar item 2 of menu bar 1'"
+           # control_centre opens the macOS Control Center popup
 
 ##### Force all scripts to run the first time (never do this in a script) #####
 sketchybar --update
