@@ -77,6 +77,7 @@ alias gd='git diff'
 alias gl='git log --all --graph --since="1 week ago" --pretty=format:"%C(magenta)%h %C(white) %an  %ar%C(auto)  %D%n%s%n"'
 alias gf='git fetch'
 alias gash='gh dash'
+alias x='exit'
 
 # fnm (fast Node version manager — replaces nvm)
 eval "$(fnm env --use-on-cd --shell zsh)"
