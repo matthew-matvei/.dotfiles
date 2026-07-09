@@ -8,26 +8,30 @@ if [ "$PERCENTAGE" = "" ]; then
 fi
 
 case "${PERCENTAGE}" in
-  9[0-9]|100) ICON=""
+9[0-9] | 100)
+  ICON="􀛨"
   ;;
-  [6-8][0-9]) ICON=""
+[6-8][0-9])
+  ICON="􀺸"
   ;;
-  [3-5][0-9]) ICON=""
+[3-5][0-9])
+  ICON="􀺶"
   ;;
-  [1-2][0-9]) ICON=""
+[1-2][0-9])
+  ICON="􀛩"
   ;;
-  *) ICON=""
+*) ICON="􀛪" ;;
 esac
 
 if [[ "$CHARGING" != "" && "$PERCENTAGE" -eq 100 ]]; then
   sketchybar --set "$NAME" icon.drawing=off label.drawing=off
 elif [[ "$CHARGING" != "" ]]; then
   sketchybar --set "$NAME" icon="$ICON" label="${PERCENTAGE}%" \
-                            icon.drawing=on label.drawing=on icon.color=0xff00ff00 label.color=0xff00ff00
+    icon.drawing=on label.drawing=on icon.color=0xff00ff00 label.color=0xff00ff00
 elif [[ "$PERCENTAGE" -lt 25 ]]; then
   sketchybar --set "$NAME" icon="$ICON" label="${PERCENTAGE}%" \
-                            icon.drawing=on label.drawing=on icon.color=0xffff0000 label.color=0xffff0000
+    icon.drawing=on label.drawing=on icon.color=0xffff0000 label.color=0xffff0000
 else
   sketchybar --set "$NAME" icon="$ICON" label="${PERCENTAGE}%" \
-                            icon.drawing=on label.drawing=on icon.color=0xffffffff label.color=0xffffffff
+    icon.drawing=on label.drawing=on icon.color=0xffffffff label.color=0xffffffff
 fi
