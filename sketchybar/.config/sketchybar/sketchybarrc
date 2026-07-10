@@ -106,6 +106,10 @@ sketchybar --add item clock right \
                                script="$PLUGIN_DIR/volume_slider.sh" \
                                updates=on \
            --subscribe volume_slider mouse.clicked \
+           --add item bluetooth_headphones right \
+           --set bluetooth_headphones update_freq=30 \
+                                     script="$PLUGIN_DIR/bluetooth_headphones.sh" \
+           --subscribe bluetooth_headphones system_woke \
            --add item battery right \
            --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh" \
            --subscribe battery system_woke power_source_change \
