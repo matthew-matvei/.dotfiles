@@ -80,6 +80,7 @@ alias gash='gh dash'
 alias x='exit'
 alias gb='git branch'
 alias gm='git merge'
+alias gml='git merge-latest'
 
 # fnm (fast Node version manager — replaces nvm)
 eval "$(fnm env --use-on-cd --shell zsh)"
@@ -102,7 +103,7 @@ if [[ "$(date +%u)" -eq 1 ]]; then
   _today="$(date +%Y-%m-%d)"
   if [[ ! -f "$_brew_stamp" ]] || [[ "$(cat "$_brew_stamp")" != "$_today" ]]; then
     echo "[brew] Running weekly upgrade..."
-    if brew update && brew upgrade; then
+    if brew update && brew upgrade --no-ask; then
       echo "[brew] Weekly upgrade completed successfully."
     else
       echo "[brew] Weekly upgrade failed (exit code $?)."
