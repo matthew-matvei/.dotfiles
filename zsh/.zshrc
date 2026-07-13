@@ -81,6 +81,7 @@ alias x='exit'
 alias gb='git branch'
 alias gm='git merge'
 alias gml='git merge-latest'
+alias pr='gh pr create'
 
 # fnm (fast Node version manager — replaces nvm)
 eval "$(fnm env --use-on-cd --shell zsh)"
