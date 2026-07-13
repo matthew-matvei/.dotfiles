@@ -2,9 +2,9 @@ prSections:
   - title: Involved
     filters: is:open involves:@me
   - title: Needs My Review
-    filters: is:open review-requested:@me -author:app/dependabot -author:shiftdev_admin
+    filters: is:open draft:false review-requested:@me -author:app/dependabot -author:shiftdev_admin
   - title: Everything else
-    filters: is:open repo:shiftfinancial/shift-payments repo:shiftfinancial/shiftonline-client-portal -author:app/dependabot -author:shiftdev_admin -involves:@me -review-requested:@me
+    filters: is:open draft:false repo:shiftfinancial/shift-payments repo:shiftfinancial/shiftonline-client-portal -author:app/dependabot -author:shiftdev_admin -involves:@me -review-requested:@me
 repo:
   branchesRefetchIntervalSeconds: 30
   prsRefetchIntervalSeconds: 60
