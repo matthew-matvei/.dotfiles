@@ -45,7 +45,7 @@
 	helper = 
 	helper = /usr/local/share/gcm-core/git-credential-manager
 [core]
-	editor = vim
+	editor = nvim
 	autocrlf = input
 	pager = diff-so-fancy | less --tabs=4 -RF
 [pull]
