@@ -82,6 +82,7 @@ alias gb='git branch'
 alias gm='git merge'
 alias gml='git merge-latest'
 alias pr='gh pr create'
+alias gwt='git worktree'
 
 # fnm (fast Node version manager — replaces nvm)
 eval "$(fnm env --use-on-cd --shell zsh)"
