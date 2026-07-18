@@ -229,5 +229,41 @@
     "unbind": {
       "shift-d": "project_panel::Delete"
     }
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "space c r": "editor::Rename"
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "f2": "editor::Rename"
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "r": "project_panel::Rename"
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "unbind": {
+      "f2": "project_panel::Rename"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "space c a": "editor::ToggleCodeActions"
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "cmd-.": "editor::ToggleCodeActions"
+    }
   }
 ]
