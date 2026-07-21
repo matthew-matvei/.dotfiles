@@ -51,6 +51,8 @@ macos-titlebar-proxy-icon = hidden
 theme = Catppuccin Mocha
 font-family = "JetBrainsMono Nerd Font Mono"
 window-padding-x = 14
+split-divider-color = #e2e2e3
+maximize = true
 
 # System
 auto-update = check
