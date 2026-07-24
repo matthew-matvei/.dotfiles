@@ -60,7 +60,7 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
-alias ls='lsd -a'
+alias ls='lsd --long --git'
 alias cat='bat'
 alias suggest='gh copilot --prompt'
 alias explain='gh copilot --prompt'
