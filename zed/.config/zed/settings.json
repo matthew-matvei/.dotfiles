@@ -9,34 +9,34 @@
 {
   "cli_default_open_behavior": "new_window",
   "auto_update_extensions": {
-    "csharp": false
+    "csharp": false,
   },
   "edit_predictions": {
-    "provider": "copilot"
+    "provider": "copilot",
   },
   "git": {
     "inline_blame": {
-      "show_commit_summary": true
-    }
+      "show_commit_summary": true,
+    },
   },
   "proxy": "",
   "git_panel": {
-    "show_count_badge": true
+    "show_count_badge": true,
   },
   "project_panel": {
-    "git_status_indicator": true
+    "git_status_indicator": true,
   },
   "active_pane_modifiers": {
-    "inactive_opacity": 0.7
+    "inactive_opacity": 0.7,
   },
   "tabs": {
-    "git_status": true
+    "git_status": true,
   },
   "file_finder": {
-    "modal_max_width": "large"
+    "modal_max_width": "large",
   },
   "prettier": {
-    "allowed": true
+    "allowed": true,
   },
   "document_symbols": "on",
   "document_folding_ranges": "on",
@@ -44,18 +44,18 @@
   "code_lens": "menu",
   "inlay_hints": {
     "show_type_hints": false,
-    "enabled": true
+    "enabled": true,
   },
   "always_treat_brackets_as_autoclosed": true,
   "vim": {
     "show_edit_predictions_in_normal_mode": true,
     "use_smartcase_find": true,
-    "toggle_relative_line_numbers": false
+    "toggle_relative_line_numbers": false,
   },
   "mouse_wheel_zoom": true,
   "which_key": {
     "delay_ms": 500,
-    "enabled": true
+    "enabled": true,
   },
   "autosave": "on_focus_change",
   "ui_font_weight": 400.0,
@@ -63,40 +63,33 @@
   "icon_theme": {
     "mode": "system",
     "light": "Zed (Default)",
-    "dark": "JetBrains New UI Icons (Dark)"
+    "dark": "JetBrains New UI Icons (Dark)",
   },
   "restore_on_startup": "launchpad",
   "collaboration_panel": {
-    "button": false
+    "button": false,
   },
   "status_bar": {
     "active_language_button": false,
-    "active_encoding_button": "disabled"
+    "active_encoding_button": "disabled",
   },
   "vim_mode": true,
   "base_keymap": "VSCode",
   "use_smartcase_search": true,
   "relative_line_numbers": "enabled",
   "gutter": {
-    "line_numbers": true
+    "line_numbers": true,
   },
   "minimap": {
-    "show": "never"
+    "show": "never",
   },
-  "buffer_font_fallbacks": [
-    "Menlo",
-    "Monaco",
-    "Courier New",
-    "monospace"
-  ],
+  "buffer_font_fallbacks": ["Menlo", "Monaco", "Courier New", "monospace"],
   "buffer_font_family": "JetBrainsMono Nerd Font Mono",
-  "wrap_guides": [
-    120
-  ],
+  "wrap_guides": [120],
   "agent_servers": {
     "github-copilot-cli": {
-      "type": "registry"
-    }
+      "type": "registry",
+    },
   },
   "ui_font_size": 14.0,
   "buffer_font_size": 13.0,
