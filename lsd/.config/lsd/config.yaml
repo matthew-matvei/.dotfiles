@@ -1,0 +1,21 @@
+blocks:
+  - name
+  - date
+
+date: relative
+
+sorting:
+  dir-grouping: first
+
+layout: oneline
+
+color:
+  when: auto
+  theme: custom
+
+display: almost-all
+
+ignore-globs:
+  - .DS_Store
+
+dereference: true
