@@ -2,6 +2,7 @@
   "extras": [
     "lazyvim.plugins.extras.lang.markdown",
     "lazyvim.plugins.extras.lang.typescript",
+    "lazyvim.plugins.extras.lsp.none-ls",
     "lazyvim.plugins.extras.test.core"
   ],
   "install_version": 8,
