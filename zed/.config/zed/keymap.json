@@ -16,7 +16,6 @@
       "space f f": "file_finder::Toggle",
       "cmd-e": "pane::RevealInProjectPanel",
       "space b d": "pane::CloseActiveItem",
-      "space g b": "git::Branch",
       "space g g": "git_panel::ToggleFocus",
       "space h": "editor::ToggleInlayHints",
       "space c a": "editor::ToggleCodeActions",
@@ -264,6 +263,18 @@
     "context": "Editor",
     "unbind": {
       "cmd-.": "editor::ToggleCodeActions"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "space g b": "git::Blame"
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "alt-cmd-g b": "git::Blame"
     }
   }
 ]
