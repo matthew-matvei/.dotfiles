@@ -138,6 +138,9 @@ export PATH="$HOME/.local/bin:$PATH"
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
+# Custom functions
+
+# Defines a shortcut for 'yazi' whereby exiting with 'q' updates the 'pwd' to the last opened directory
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	command yazi "$@" --cwd-file="$tmp"
@@ -145,3 +148,16 @@ function y() {
 	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
 	command rm -f -- "$tmp"
 }
+
+set_unaliased_title() {
+  print -Pn "\e]0;$3\a"
+}
+
+reset_title() {
+  print -Pn "\e]0;%~\a"
+}
+
+# Safely append to Zsh's hook arrays to prevent terminal emulator from overwriting the title
+autoload -Uz add-zsh-hook
+add-zsh-hook preexec set_unaliased_title
+add-zsh-hook precmd reset_title
