@@ -92,6 +92,8 @@ eval "$(fnm env --use-on-cd --shell zsh)"
 # Environment variables
 export REQUESTS_CA_BUNDLE=/Users/matthew.james/cert.pem
 export NODE_EXTRA_CA_CERTS=/Users/matthew.james/cert.pem
+export SSL_CERT_FILE=/Users/matthew.james/cert.pem   # Python/httpx/OpenSSL (jiratui)
+export CURL_CA_BUNDLE=/Users/matthew.james/cert.pem   # curl
 
 export DOTNET_ROOT=/usr/local/share/dotnet
 export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
