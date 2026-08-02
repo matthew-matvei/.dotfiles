@@ -7,5 +7,10 @@
     "bash": true
   },
   "formatter": true,
-  "lsp": true
+  "lsp": true,
+  "permission": {
+    "external_directory": {
+      "/tmp/**": "allow"
+    }
+  }
 }
