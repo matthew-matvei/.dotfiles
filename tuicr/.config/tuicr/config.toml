@@ -1,0 +1,15 @@
+theme = "catppuccin-mocha"
+diff_view = "side-by-side"
+appearance = "system"
+mouse = true
+relative_line_numbers = true
+
+comment_types = [
+  { id = "question", color = "yellow", definition = "looking for clarification" },
+  { id = "comment", color = "blue", definition = "non-blocking suggestion" },
+  { id = "praise", color = "green", definition = "positive feedback" },
+  { id = "blocker", color = "red", definition = "must fix before merge" },
+]
+
+[forge]
+comment_type_prefix = true
