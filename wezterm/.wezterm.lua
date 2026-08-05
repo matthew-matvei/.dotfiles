@@ -55,5 +55,53 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
 	}
 end)
 
+wezterm.on("gui-startup", function(cmd)
+	local tab, pane, window = wezterm.mux.spawn_window(cmd or {})
+	window:gui_window():maximize()
+end)
+
+config.keys = {
+	-- Split pane horizontally
+	{
+		key = "|",
+		mods = "SUPER",
+		action = wezterm.action.SplitHorizontal({
+			domain = "CurrentPaneDomain",
+		}),
+	},
+	-- Split pane vertically
+	{
+		key = "_",
+		mods = "SUPER",
+		action = wezterm.action.SplitVertical({
+			domain = "CurrentPaneDomain",
+		}),
+	},
+	-- Improved url opening
+	{
+		key = "u",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.QuickSelectArgs({
+			patterns = {
+				"https?://\\S+",
+			},
+			action = wezterm.action_callback(function(window, pane)
+				local url = window:get_selection_text_for_pane(pane)
+				if url and url ~= "" then
+					wezterm.log_info("Opening URL: " .. url)
+					wezterm.open_with(url)
+				end
+			end),
+		}),
+	},
+}
+
+config.inactive_pane_hsb = {
+	saturation = 0.8,
+	brightness = 0.7,
+}
+
+config.quick_select_alphabet = "arstdhneio"
+
 -- Finally, return the configuration to wezterm:
 return config
