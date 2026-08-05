@@ -2,9 +2,9 @@
 
 options=(
   style=round
-  width=10.0
+  width=6.0
   hidpi=off
-  active_color="glow(0xffcfb0fb)"
+  active_color="0xffcfb0fb"
   inactive_color=0x00000000
   blacklist="Rider"
 )
