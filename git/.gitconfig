@@ -64,5 +64,3 @@
 	enabled = true
 [credential "https://dev.azure.com"]
 	useHttpPath = true
-[diff]
-	tool = hunk
