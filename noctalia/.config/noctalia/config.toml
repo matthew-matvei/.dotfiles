@@ -109,26 +109,22 @@ builtin_ids = [
 max_length = 620
 
 [widget.clock]
-#color = "secondary"
-color = "primary"
-#format = "{:%H:%M %A %m/%d/%y}"
-format = "%a %m/%d %H:%M"
+color = "#ffffff"
+format = "%a %d/%m %H:%M"
 
 [widget.launcher]
-color = "secondary"
+color = "#ffffff"
 
 [widget.media]
 hide_when_no_media = true
 title_scroll = "on_hover"
 
 [widget.network]
-#color = "secondary"
-color = "primary"
+color = "#ffffff"
 show_label = false
 
 [widget.notifications]
-#color = "secondary"
-color = "primary"
+color = "#ffffff"
 hide_when_no_unread = true
 
 [widget.session]
@@ -156,7 +152,7 @@ capsule = true
 capsule_fill = "on_secondary"
 
 [widget.volume]
-color = "primary"
+color = "#ffffff"
 show_label = false
 
 [widget.workspaces]
@@ -166,6 +162,3 @@ capsule_fill = "on_primary"
 display = "none"
 inactive_pill_size = 1.0
 pill_scale = 0.80
-
-[storage]
-key_source = "secret-service"
