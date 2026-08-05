@@ -6,6 +6,9 @@ local config = wezterm.config_builder()
 
 -- This is where you actually apply your config choices.
 
+-- Wezterm fails to start with Hyprland without this
+config.enable_wayland = false
+
 -- Appearance
 config.color_scheme = "Catppuccin Mocha"
 config.window_frame = {
