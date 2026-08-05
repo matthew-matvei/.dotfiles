@@ -9,7 +9,7 @@ local config = wezterm.config_builder()
 -- Appearance
 config.color_scheme = "Catppuccin Mocha"
 config.window_frame = {
-	font = wezterm.font({ family = "JetBrainsMono Nerd Font" }),
+	font = wezterm.font({ family = "JetBrainsMono Nerd Font", weight = "Bold" }),
 	font_size = 12.0,
 	inactive_titlebar_bg = "none",
 	active_titlebar_bg = "none",
@@ -20,8 +20,8 @@ config.colors = {
 		background = "none",
 	},
 }
-config.font = wezterm.font("JetBrains Mono")
-config.font_size = 13
+config.font = wezterm.font("JetBrainsMono Nerd Font")
+config.font_size = 14
 config.window_background_opacity = 0.8
 
 config.use_fancy_tab_bar = true
