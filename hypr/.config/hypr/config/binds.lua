@@ -54,7 +54,7 @@ hl.bind(
 	hl.dsp.exec_cmd(
 		"hyprctl clients | grep "
 			.. TERMINAL
-			.. " && hyprctl dispatch 'hl.dsp.focus({ window = \"class:"
+			.. " && hyprctl dispatch 'hl.dsp.focus({ window = \"class:org.wezfurlong."
 			.. TERMINAL
 			.. "\" })'"
 			.. " || setsid -f "

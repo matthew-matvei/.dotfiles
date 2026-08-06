@@ -1,6 +1,6 @@
 -- Hyprland default apps
 
-TERMINAL = "org.wezfurlong.wezterm"
+TERMINAL = "wezterm"
 FILE_MANAGER = "dolphin"
 BROWSER = "firefox"
 EDITOR = "gnome-text-editor --new-window"
