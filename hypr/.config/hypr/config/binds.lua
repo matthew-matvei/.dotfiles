@@ -10,8 +10,9 @@ local launchPrefix = "uwsm app -- " -- if you are not using UWSM, make this empt
 hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd("hyprctl kill"))
 hl.bind("CTRL + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + ALT + Space", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + D", hl.dsp.window.fullscreen({ mode = 1 }))
-hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
+-- hl.bind(mainMod .. " + D", hl.dsp.window.fullscreen({ mode = 1 }))
+hl.bind("ALT + F", hl.dsp.window.fullscreen({ mode = 1 }))
+--hl.bind("ALT + F", hl.dsp.window.fullscreen("maximized", "toggle"))
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))
 
 -- Change focus
@@ -80,7 +81,8 @@ hl.bind(
 -- hl.bind("CONTROL + SHIFT + Escape", hl.dsp.exec_cmd(launchPrefix .. TERMINAL .. " -e btop"))
 -- hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd(noctCall .. "settings-toggle"))
 -- hl.bind(mainMod .. " + X", hl.dsp.exec_cmd(noctCall .. "panel-toggle control-center"))
-hl.bind(mainMod .. " + Space", hl.dsp.exec_cmd(noctCall .. "panel-toggle launcher"))
+-- hl.bind(mainMod .. " + Space", hl.dsp.exec_cmd(noctCall .. "panel-toggle launcher"))
+hl.bind("ALT + Space", hl.dsp.exec_cmd(noctCall .. "panel-toggle launcher"))
 hl.bind("ALT + S", hl.dsp.exec_cmd(noctCall .. "panel-toggle launcher /emo"))
 hl.bind("ALT + L", hl.dsp.exec_cmd(noctCall .. "session lock"))
 -- hl.bind(mainMod .. " + ALT + C", hl.dsp.exec_cmd(noctCall .. "panel-toggle session"))
@@ -145,9 +147,9 @@ for i = 1, NUM_WPM do
 end
 
 -- Move to adjacent workspaces and next empty on a given monitor
-hl.bind(mainMod .. " + CONTROL + Right", hl.dsp.focus({ workspace = "m+1" }))
-hl.bind(mainMod .. " + CONTROL + Left", hl.dsp.focus({ workspace = "m-1" }))
-hl.bind(mainMod .. " + CONTROL + Down", hl.dsp.focus({ workspace = "emptym" }))
+hl.bind("ALT + CONTROL + Right", hl.dsp.focus({ workspace = "m+1" }))
+hl.bind("ALT + CONTROL + Left", hl.dsp.focus({ workspace = "m-1" }))
+hl.bind("ALT + CONTROL + Down", hl.dsp.focus({ workspace = "emptym" }))
 
 -- Scroll through existing workspaces & monitors
 hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "m-1" }))
