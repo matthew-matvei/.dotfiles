@@ -101,11 +101,13 @@ export EDITOR=nvim
 
 export HOMEBREW_NO_ENV_HINTS=1
 
-export XDG_CONFIG_HOME=/Users/matthew.james/.config
+export XDG_CONFIG_HOME=$HOME/.config
 
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 export PATH=$PATH:$HOME/.dotnet/tools
+
+export PATH=$PATH:$HOME/.bin
 
 # Auto-upgrade Homebrew packages on first shell of each Monday
 if [[ "$(date +%u)" -eq 1 ]]; then
