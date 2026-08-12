@@ -110,7 +110,7 @@ max_length = 620
 
 [widget.clock]
 color = "#ffffff"
-format = "%a %d/%m %H:%M"
+format = "%a %d %b %H:%M"
 
 [widget.launcher]
 color = "#ffffff"
