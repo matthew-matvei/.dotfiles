@@ -64,7 +64,6 @@ alias ls='lsd --long --git'
 alias cat='bat'
 alias suggest='gh copilot --prompt'
 alias explain='gh copilot --prompt'
-alias co='copilot'
 alias ga='git add'
 alias gc='git commit'
 alias gco='git checkout'
@@ -83,8 +82,8 @@ alias gm='git merge'
 alias gml='git merge-latest'
 alias pr='gh pr create'
 alias gwt='git worktree'
-alias vim='nvim'
 alias v='nvim'
+alias oc='opencode'
 
 # fnm (fast Node version manager — replaces nvm)
 eval "$(fnm env --use-on-cd --shell zsh)"
