@@ -12,7 +12,7 @@ config.enable_wayland = false
 -- Appearance
 config.color_scheme = "Catppuccin Mocha"
 config.window_frame = {
-	font = wezterm.font({ family = "JetBrainsMono Nerd Font", weight = "Bold" }),
+	font = wezterm.font({ family = "JetBrainsMono", weight = "Bold" }),
 	font_size = 12.0,
 	inactive_titlebar_bg = "none",
 	active_titlebar_bg = "none",
@@ -23,7 +23,7 @@ config.colors = {
 		background = "none",
 	},
 }
-config.font = wezterm.font("JetBrainsMono Nerd Font")
+config.font = wezterm.font("JetBrainsMono")
 config.font_size = 14
 config.window_background_opacity = 0.8
 
