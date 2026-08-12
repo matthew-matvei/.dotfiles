@@ -128,7 +128,7 @@ color = "#ffffff"
 hide_when_no_unread = true
 
 [widget.session]
-color = "error"
+color = "#ffffff"
 
 [widget.spacer_1]
 type = "spacer"
