@@ -13,30 +13,36 @@ config.enable_wayland = false
 
 -- Appearance
 config.color_scheme = "Catppuccin Mocha"
+local catppuccinTheme = wezterm.color.get_builtin_schemes()["Catppuccin Mocha"]
 config.window_frame = {
 	font = wezterm.font({ family = "JetBrainsMono", weight = "Bold" }),
 	font_size = 12.0,
 	inactive_titlebar_bg = "none",
 	active_titlebar_bg = "none",
+	border_top_height = "0.5cell",
+	border_top_color = catppuccinTheme.tab_bar.inactive_tab.bg_color,
+}
+
+config.window_padding = {
+	top = "0.5cell",
 }
 
 config.colors = {
 	tab_bar = {
-		background = "none",
+		background = catppuccinTheme.tab_bar.inactive_tab.bg_color,
 	},
 }
 config.font = wezterm.font("JetBrainsMono")
 config.font_size = 14
 config.window_background_opacity = 0.8
 
-config.use_fancy_tab_bar = true
+config.use_fancy_tab_bar = false
+config.tab_max_width = 999
 config.macos_window_background_blur = 20
 
 config.window_decorations = "RESIZE"
 
 config.show_new_tab_button_in_tab_bar = false
-
-local catppuccinTheme = wezterm.color.get_builtin_schemes()["Catppuccin Mocha"]
 
 config.window_background_gradient = {
 	colors = { catppuccinTheme.background },
