@@ -6,6 +6,8 @@ local config = wezterm.config_builder()
 
 -- This is where you actually apply your config choices.
 
+config.leader = { key = ";", timeout_milliseconds = 1000 }
+
 -- Wezterm fails to start with Hyprland without this
 config.enable_wayland = false
 
@@ -64,18 +66,38 @@ wezterm.on("gui-startup", function(cmd)
 end)
 
 config.keys = {
+	{
+		key = "h",
+		mods = "LEADER",
+		action = wezterm.action.ActivatePaneDirection("Left"),
+	},
+	{
+		key = "j",
+		mods = "LEADER",
+		action = wezterm.action.ActivatePaneDirection("Down"),
+	},
+	{
+		key = "k",
+		mods = "LEADER",
+		action = wezterm.action.ActivatePaneDirection("Up"),
+	},
+	{
+		key = "l",
+		mods = "LEADER",
+		action = wezterm.action.ActivatePaneDirection("Right"),
+	},
 	-- Split pane horizontally
 	{
 		key = "|",
-		mods = "SUPER",
+		mods = "LEADER|SHIFT",
 		action = wezterm.action.SplitHorizontal({
 			domain = "CurrentPaneDomain",
 		}),
 	},
 	-- Split pane vertically
 	{
-		key = "_",
-		mods = "SUPER",
+		key = "-",
+		mods = "LEADER",
 		action = wezterm.action.SplitVertical({
 			domain = "CurrentPaneDomain",
 		}),
