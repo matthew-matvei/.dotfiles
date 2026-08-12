@@ -51,13 +51,28 @@ config.window_background_gradient = {
 wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
 	local background = catppuccinTheme.tab_bar.inactive_tab.bg_color
 	local foreground = catppuccinTheme.tab_bar.inactive_tab.fg_color
+	local index = tab.tab_index + 1
 
 	if tab.is_active then
 		background = catppuccinTheme.tab_bar.active_tab.bg_color
 		foreground = catppuccinTheme.tab_bar.active_tab.fg_color
 	end
 
-	local title = "   " .. wezterm.truncate_right(tab.active_pane.title, max_width - 1) .. "   "
+	local title = string.format(" %d: ", index) .. wezterm.truncate_right(tab.active_pane.title, max_width - 1)
+
+	local target_width = math.floor(max_width)
+	local padding_total = target_width - string.len(title)
+	if padding_total < 0 then
+		padding_total = 0
+	end
+
+	local left_padding = math.floor(padding_total / 2)
+	local right_padding = padding_total - left_padding
+
+	local left_spaces = string.rep(" ", left_padding)
+	local right_spaces = string.rep(" ", right_padding)
+
+	title = left_spaces .. title .. right_spaces
 
 	return {
 		{ Background = { Color = background } },
