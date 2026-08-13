@@ -9,11 +9,11 @@ local launchPrefix = "uwsm app -- " -- if you are not using UWSM, make this empt
 -- Window manipulation
 hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd("hyprctl kill"))
 hl.bind("CTRL + Q", hl.dsp.window.close())
-hl.bind(mainMod .. " + ALT + Space", hl.dsp.window.float({ action = "toggle" }))
+-- hl.bind(mainMod .. " + ALT + Space", hl.dsp.window.float({ action = "toggle" }))
 -- hl.bind(mainMod .. " + D", hl.dsp.window.fullscreen({ mode = 1 }))
 hl.bind("ALT + F", hl.dsp.window.fullscreen({ mode = 1 }))
 --hl.bind("ALT + F", hl.dsp.window.fullscreen("maximized", "toggle"))
-hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))
+-- hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))
 
 -- Change focus
 hl.bind(mainMod .. " + Left", hl.dsp.focus({ direction = "left" }))
@@ -21,7 +21,7 @@ hl.bind(mainMod .. " + Right", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + Up", hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + Down", hl.dsp.focus({ direction = "down" }))
 hl.bind("ALT + Tab", hl.dsp.window.cycle_next())
-hl.bind(mainMod .. " + Tab", hl.dsp.exec_cmd(noctCall .. "window-switcher"))
+-- hl.bind(mainMod .. " + Tab", hl.dsp.exec_cmd(noctCall .. "window-switcher"))
 
 -- Move active window around workspaces & monitors
 hl.bind(mainMod .. " + SHIFT + Up", hl.dsp.window.move({ direction = "u" }))
@@ -57,8 +57,9 @@ hl.bind(
 			.. TERMINAL
 			.. " && hyprctl dispatch 'hl.dsp.focus({ window = \"class:org.wezfurlong."
 			.. TERMINAL
-			.. "\" })'"
-			.. " || setsid -f "
+			.. "\" })' || "
+			-- .. "setsid -f "
+			.. launchPrefix
 			.. TERMINAL
 	)
 )
@@ -73,8 +74,9 @@ hl.bind(
 			.. BROWSER
 			.. " && hyprctl dispatch 'hl.dsp.focus({ window = \"class:"
 			.. BROWSER
-			.. "\" })'"
-			.. " || setsid -f "
+			.. "\" })' || "
+			-- .. " setsid -f "
+			.. launchPrefix
 			.. BROWSER
 	)
 )
