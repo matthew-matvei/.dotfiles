@@ -15,10 +15,6 @@ config.enable_wayland = false
 config.color_scheme = "Catppuccin Mocha"
 local catppuccinTheme = wezterm.color.get_builtin_schemes()["Catppuccin Mocha"]
 config.window_frame = {
-	font = wezterm.font({ family = "JetBrainsMono Nerd Font", weight = "Bold" }),
-	font_size = 12.0,
-	inactive_titlebar_bg = "none",
-	active_titlebar_bg = "none",
 	border_top_height = "0.5cell",
 	border_top_color = catppuccinTheme.tab_bar.inactive_tab.bg_color,
 }
