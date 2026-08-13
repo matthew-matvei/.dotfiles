@@ -154,5 +154,7 @@ config.inactive_pane_hsb = {
 
 config.quick_select_alphabet = "arstdhneio"
 
+config.hide_mouse_cursor_when_typing = true
+
 -- Finally, return the configuration to wezterm:
 return config
