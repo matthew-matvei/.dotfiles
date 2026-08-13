@@ -145,6 +145,11 @@ config.keys = {
 			end),
 		}),
 	},
+	{
+		key = "f",
+		mods = "LEADER",
+		action = wezterm.action.TogglePaneZoomState,
+	},
 }
 
 config.inactive_pane_hsb = {
