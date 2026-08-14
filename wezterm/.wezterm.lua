@@ -146,6 +146,11 @@ config.keys = {
 		}),
 	},
 	{
+		key = "c",
+		mods = "LEADER",
+		action = wezterm.action.ActivateCopyMode,
+	},
+	{
 		key = "f",
 		mods = "LEADER",
 		action = wezterm.action.TogglePaneZoomState,
