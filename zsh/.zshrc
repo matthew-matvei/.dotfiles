@@ -25,6 +25,7 @@ zinit ice wait lucid; zinit light zsh-users/zsh-syntax-highlighting
 zinit ice wait lucid; zinit light zsh-users/zsh-completions
 zinit ice wait lucid; zinit light zsh-users/zsh-autosuggestions
 zinit ice wait lucid; zinit light Aloxaf/fzf-tab
+zinit light jeffreytse/zsh-vi-mode
 
 # Load completions — only rebuild dump once per day
 autoload -Uz compinit
@@ -134,10 +135,6 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-
-source /opt/homebrew/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
-
-export PATH="$HOME/.local/bin:$PATH"
 
 # Shell integrations
 eval "$(fzf --zsh)"
