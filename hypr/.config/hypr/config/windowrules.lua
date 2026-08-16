@@ -16,6 +16,26 @@ hl.window_rule({
 local gamingApps = "^(steam_app.*|gamescope)$"
 local gamingWorkspace = "name:gaming"
 
+hl.window_rule({
+	name = "inhibit-idle-on-fullscreen",
+	match = {
+		class = ".*",
+	},
+	idle_inhibit = "fullscreen",
+})
+
+hl.config({
+	general = {
+		allow_tearing = true,
+	},
+})
+
+hl.window_rule({
+	name = "allow-tearing-with-steam-games",
+	match = { class = "^(steam_app_%d+)$" },
+	immediate = true,
+})
+
 hl.window_rule({ match = { content = "game" }, workspace = gamingWorkspace })
 hl.window_rule({
 	match = { xdg_tag = "^(.*game.*)$" },
