@@ -2,9 +2,6 @@
 ui_scale = 1.20
 
 [bar.default]
-#start = [ "launcher", "clock", "spacer_1", "group:g1" ]
-#center = [ "workspaces", "spacer_1", "active_window" ]
-#end = [ "media", "spacer_1", "tray", "notifications", "network", "volume", "session" ]
 start = ["session", "spacer_1", "active_window"]
 center = ["group:g1", "workspaces"]
 end = [
@@ -25,13 +22,15 @@ radius_top_left = 0
 radius_top_right = 0
 scale = 1.10
 thickness = 35
+background_opacity = 0
+capsule_opacity = 0.6
 
 [[bar.default.capsule_group]]
 border = ""
 fill = "on_secondary"
 id = "g1"
 members = ["temp", "sysmon_2", "sysmon_3"]
-opacity = 1.0
+opacity = 0.6
 padding = 6.0
 
 [shell]
