@@ -13,7 +13,7 @@ hl.bind("CTRL + Q", hl.dsp.window.close())
 -- hl.bind(mainMod .. " + D", hl.dsp.window.fullscreen({ mode = 1 }))
 hl.bind("ALT + F", hl.dsp.window.fullscreen({ mode = 1 }))
 --hl.bind("ALT + F", hl.dsp.window.fullscreen("maximized", "toggle"))
--- hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))
+hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))
 
 -- Change focus
 hl.bind(mainMod .. " + Left", hl.dsp.focus({ direction = "left" }))
