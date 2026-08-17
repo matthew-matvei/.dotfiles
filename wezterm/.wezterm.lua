@@ -6,7 +6,7 @@ local config = wezterm.config_builder()
 
 -- This is where you actually apply your config choices.
 
-config.leader = { key = ";", timeout_milliseconds = 1000 }
+config.leader = { key = ";", mods = "CTRL", timeout_milliseconds = 1000 }
 
 -- Wezterm fails to start with Hyprland without this
 config.enable_wayland = false
