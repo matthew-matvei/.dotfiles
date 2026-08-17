@@ -2,7 +2,7 @@
 ui_scale = 1.20
 
 [bar.default]
-start = ["session", "spacer_1", "active_window"]
+start = ["active_window"]
 center = ["group:g1", "workspaces"]
 end = [
   "media",
@@ -125,9 +125,6 @@ show_label = false
 [widget.notifications]
 color = "#ffffff"
 hide_when_no_unread = true
-
-[widget.session]
-color = "#ffffff"
 
 [widget.spacer_1]
 type = "spacer"
