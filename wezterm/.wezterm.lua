@@ -54,10 +54,23 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
 		foreground = catppuccinTheme.tab_bar.active_tab.fg_color
 	end
 
-	local title = string.format(" %d: ", index) .. wezterm.truncate_right(tab.active_pane.title, max_width - 1)
+	-- When the visible pane is zoomed, only a single pane of several is shown.
+	-- Prefix an eye icon so it's clear we're focused on one pane.
+	local zoom_prefix = ""
+	local zoom_len_correction = 0
+	if tab.active_pane.is_zoomed then
+		local eye_icon = wezterm.nerdfonts.fa_eye
+		zoom_prefix = eye_icon .. " "
+		-- string.len counts UTF-8 bytes; the glyph is 1 display cell, so
+		-- correct for the extra bytes when computing padding.
+		zoom_len_correction = string.len(eye_icon) - 1
+	end
+
+	local title = string.format("%s %d: ", zoom_prefix, index)
+		.. wezterm.truncate_right(tab.active_pane.title, max_width - 1)
 
 	local target_width = math.floor(max_width)
-	local padding_total = target_width - string.len(title)
+	local padding_total = target_width - (string.len(title) - zoom_len_correction)
 	if padding_total < 0 then
 		padding_total = 0
 	end
