@@ -110,7 +110,7 @@ add-zsh-hook preexec set_unaliased_title
 add-zsh-hook precmd reset_title
 
 # Auto-upgrade Homebrew packages on first shell of each Monday
-if [[ "$(date +%u)" -eq 1 ]]; then
+if [[ -f "/opt/homebrew/bin/brew" && "$(date +%u)" -eq 1 ]]; then
 _brew_cache_dir="${XDG_CACHE_HOME:-$HOME/.cache}"
 _brew_stamp="${_brew_cache_dir}/brew-weekly-upgrade"
 _today="$(date +%Y-%m-%d)"

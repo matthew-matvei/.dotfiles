@@ -7,9 +7,9 @@ if [[ -f "/opt/homebrew/bin/brew" ]]; then
   fi
   source "$_brew_cache"
   unset _brew_cache
-fi
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 
 # Added by Toolbox App
 export PATH="$PATH:$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
