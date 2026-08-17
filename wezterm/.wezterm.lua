@@ -45,15 +45,8 @@ config.window_background_gradient = {
 }
 
 wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
-	local background = catppuccinTheme.tab_bar.inactive_tab.bg_color
-	local foreground = catppuccinTheme.tab_bar.inactive_tab.fg_color
 	local index = tab.tab_index + 1
-
-	if tab.is_active then
-		background = catppuccinTheme.tab_bar.active_tab.bg_color
-		foreground = catppuccinTheme.tab_bar.active_tab.fg_color
-	end
-
+	--
 	-- When the visible pane is zoomed, only a single pane of several is shown.
 	-- Prefix an eye icon so it's clear we're focused on one pane.
 	local zoom_prefix = ""
@@ -84,8 +77,6 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
 	title = left_spaces .. title .. right_spaces
 
 	return {
-		{ Background = { Color = background } },
-		{ Foreground = { Color = foreground } },
 		{ Text = title },
 	}
 end)
