@@ -155,7 +155,34 @@ config.keys = {
 		mods = "LEADER",
 		action = wezterm.action.TogglePaneZoomState,
 	},
+	-- Create a new tab
+	{
+		key = "t",
+		mods = "LEADER",
+		action = wezterm.action.SpawnTab("CurrentPaneDomain"),
+	},
+	-- Navigate to previous/next tab
+	{
+		key = "[",
+		mods = "LEADER",
+		action = wezterm.action.ActivateTabRelative(-1),
+	},
+	{
+		key = "]",
+		mods = "LEADER",
+		action = wezterm.action.ActivateTabRelative(1),
+	},
 }
+
+-- Leader + number selects the corresponding tab (1-indexed for the user,
+-- ActivateTab is 0-indexed internally)
+for i = 1, 9 do
+	table.insert(config.keys, {
+		key = tostring(i),
+		mods = "LEADER",
+		action = wezterm.action.ActivateTab(i - 1),
+	})
+end
 
 config.inactive_pane_hsb = {
 	saturation = 0.8,
