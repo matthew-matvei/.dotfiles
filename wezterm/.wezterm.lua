@@ -65,13 +65,33 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
 		zoom_len_correction = string.len(eye_icon) - 1
 	end
 
-	local title = string.format("%s %d: ", zoom_prefix, index)
-		.. wezterm.truncate_right(tab.active_pane.title, max_width - 1)
-
+	-- Every tab except the first gets a leading separator glyph so it's clear
+	-- where one tab ends and the next begins. Reserve a cell for it in the
+	-- width calculation so tab widths stay consistent.
+	local has_separator = tab.tab_index > 0
 	local target_width = math.floor(max_width)
+	if has_separator then
+		target_width = target_width - 1
+	end
+
+	-- Always keep at least this many spaces between the title and the tab
+	-- edges/separator so long titles don't run right up to the divider.
+	local min_padding = 2
+
+	local prefix = string.format("%s %d: ", zoom_prefix, index)
+	local prefix_len = string.len(prefix) - zoom_len_correction
+
+	-- Reserve room for the prefix plus the minimum padding on both sides.
+	local available_for_title = target_width - prefix_len - (min_padding * 2)
+	if available_for_title < 0 then
+		available_for_title = 0
+	end
+
+	local title = prefix .. wezterm.truncate_right(tab.active_pane.title, available_for_title)
+
 	local padding_total = target_width - (string.len(title) - zoom_len_correction)
-	if padding_total < 0 then
-		padding_total = 0
+	if padding_total < min_padding * 2 then
+		padding_total = min_padding * 2
 	end
 
 	local left_padding = math.floor(padding_total / 2)
@@ -82,9 +102,21 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
 
 	title = left_spaces .. title .. right_spaces
 
-	return {
-		{ Text = title },
-	}
+	-- Colour the title explicitly per tab: accent for the active tab, the
+	-- theme's default for inactive ones. Setting it here also stops the
+	-- separator's colour from bleeding into the title text.
+	local title_fg = tab.is_active and catppuccinTheme.tab_bar.active_tab.bg_color
+		or catppuccinTheme.tab_bar.inactive_tab.fg_color
+
+	local elements = {}
+	if has_separator then
+		table.insert(elements, { Foreground = { Color = catppuccinTheme.tab_bar.active_tab.bg_color } })
+		table.insert(elements, { Text = wezterm.nerdfonts.pl_left_soft_divider })
+	end
+	table.insert(elements, { Foreground = { Color = title_fg } })
+	table.insert(elements, { Text = title })
+
+	return elements
 end)
 
 config.keys = {
