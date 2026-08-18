@@ -26,6 +26,12 @@ config.window_padding = {
 config.colors = {
 	tab_bar = {
 		background = catppuccinTheme.tab_bar.inactive_tab.bg_color,
+		active_tab = {
+			-- No background highlight: match the tab bar background instead.
+			bg_color = catppuccinTheme.tab_bar.inactive_tab.bg_color,
+			-- Move the accent colour to the text so the active tab still stands out.
+			fg_color = catppuccinTheme.tab_bar.active_tab.bg_color,
+		},
 	},
 }
 config.font = wezterm.font("JetBrainsMono Nerd Font")
