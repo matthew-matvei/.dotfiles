@@ -14,6 +14,14 @@ config.enable_wayland = false
 -- Appearance
 config.color_scheme = "Catppuccin Mocha"
 local catppuccinTheme = wezterm.color.get_builtin_schemes()["Catppuccin Mocha"]
+config.window_frame = {
+	border_top_height = "0.5cell",
+	border_top_color = catppuccinTheme.tab_bar.inactive_tab.bg_color,
+}
+
+config.window_padding = {
+	top = "0.5cell",
+}
 
 config.colors = {
 	tab_bar = {
