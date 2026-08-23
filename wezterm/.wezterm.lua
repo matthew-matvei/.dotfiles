@@ -144,30 +144,30 @@ config.keys = {
 	{
 		key = "H",
 		mods = "LEADER|SHIFT",
-		action = wezterm.action.SplitHorizontal({
-			domain = "CurrentPaneDomain",
+		action = wezterm.action.SplitPane({
+			direction = "Left",
 		}),
 	},
 	{
 		key = "L",
 		mods = "LEADER|SHIFT",
-		action = wezterm.action.SplitHorizontal({
-			domain = "CurrentPaneDomain",
+		action = wezterm.action.SplitPane({
+			direction = "Right",
 		}),
 	},
 	-- Split pane vertically
 	{
 		key = "J",
 		mods = "LEADER",
-		action = wezterm.action.SplitVertical({
-			domain = "CurrentPaneDomain",
+		action = wezterm.action.SplitPane({
+			direction = "Down",
 		}),
 	},
 	{
 		key = "K",
 		mods = "LEADER",
-		action = wezterm.action.SplitVertical({
-			domain = "CurrentPaneDomain",
+		action = wezterm.action.SplitPane({
+			direction = "Up",
 		}),
 	},
 	-- Improved url opening
