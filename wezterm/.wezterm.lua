@@ -214,6 +214,17 @@ config.keys = {
 		mods = "LEADER",
 		action = wezterm.action.ActivateTabRelative(1),
 	},
+	{
+		key = "w",
+		mods = "LEADER",
+		action = wezterm.action.CloseCurrentTab({ confirm = true }),
+	},
+	-- Remove default keybindings
+	{
+		key = "t",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.DisableDefaultAssignment,
+	},
 }
 
 -- Leader + number selects the corresponding tab (1-indexed for the user,
