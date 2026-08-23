@@ -111,7 +111,7 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
 	local elements = {}
 	if has_separator then
 		table.insert(elements, { Foreground = { Color = catppuccinTheme.tab_bar.inactive_tab.fg_color } })
-		table.insert(elements, { Text = wezterm.nerdfonts.pl_left_soft_divider })
+		table.insert(elements, { Text = wezterm.nerdfonts.fa_chevron_right })
 	end
 	table.insert(elements, { Foreground = { Color = title_fg } })
 	table.insert(elements, { Text = title })
