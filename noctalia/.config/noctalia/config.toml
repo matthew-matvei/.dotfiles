@@ -152,3 +152,10 @@ capsule_fill = "on_primary"
 show_labels = false
 inactive_pill_size = 1.0
 pill_scale = 0.80
+
+[shell.launcher.dmenu.entry.capturearea]
+label = "Capture area"
+glyph = "camera"
+global = true
+command = "printf 'Capture area'"
+exec = "/home/drumstix/.bin/grimblast copy area"
