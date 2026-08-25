@@ -114,6 +114,8 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
 		table.insert(elements, { Text = wezterm.nerdfonts.fa_chevron_right })
 	end
 	table.insert(elements, { Foreground = { Color = title_fg } })
+	table.insert(elements, { Attribute = { Intensity = tab.is_active and "Bold" or "Normal" } })
+	table.insert(elements, { Attribute = { Italic = tab.is_active } })
 	table.insert(elements, { Text = title })
 
 	return elements
