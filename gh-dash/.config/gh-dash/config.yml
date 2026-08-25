@@ -51,7 +51,9 @@ defaults:
         hidden: true
   refetchIntervalMinutes: 30
 keybindings:
-  universal: []
+  universal:
+    - key: enter
+      builtin: openGithub
   issues: []
   prs: []
   branches: []
