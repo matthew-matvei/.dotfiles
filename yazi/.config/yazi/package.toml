@@ -8,6 +8,11 @@ use = "yazi-rs/plugins:git"
 rev = "c591a36"
 hash = "5bb0bfab901d3601c370eafdd66edd31"
 
+[[plugin.deps]]
+use = "ciarandg/cd-git-root"
+rev = "a0e0f4b"
+hash = "b84a85f3b513bd9c0a0ab93cc7c8e4c3"
+
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-mocha"
 rev = "20b47bf"
