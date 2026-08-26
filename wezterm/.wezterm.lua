@@ -240,8 +240,8 @@ for i = 1, 9 do
 end
 
 config.inactive_pane_hsb = {
-	saturation = 0.8,
-	brightness = 0.7,
+	saturation = 0.7,
+	brightness = 0.6,
 }
 
 config.quick_select_alphabet = "arstdhneio"
