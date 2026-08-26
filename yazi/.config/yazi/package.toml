@@ -13,6 +13,11 @@ use = "ciarandg/cd-git-root"
 rev = "a0e0f4b"
 hash = "b84a85f3b513bd9c0a0ab93cc7c8e4c3"
 
+[[plugin.deps]]
+use = "yazi-rs/plugins:mount"
+rev = "c591a36"
+hash = "b95f898e6dc60b52edbc415952e14395"
+
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-mocha"
 rev = "20b47bf"

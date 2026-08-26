@@ -1,4 +1,10 @@
+# Go to git root plugin
 [[mgr.prepend_keymap]]
 on = ["g", "r"]
 run = "plugin cd-git-root"
 desc = "Go to git repo root"
+
+# Mount plugin
+[[mgr.prepend_keymap]]
+on = "M"
+run = "plugin mount"
