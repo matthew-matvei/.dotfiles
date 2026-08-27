@@ -50,12 +50,6 @@ defaults:
         width: 20
         hidden: true
   refetchIntervalMinutes: 30
-keybindings:
-  universal:
-    - key: enter
-      builtin: openGithub
-  issues: []
-  prs: []
   branches: []
 repoPaths:
   shiftfinancial/*: ~/Code/*
