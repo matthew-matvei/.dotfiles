@@ -1,6 +1,8 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "plugin": ["superpowers@git+https://github.com/obra/superpowers.git"],
+  "plugin": [
+    "superpowers@git+https://github.com/obra/superpowers.git"
+  ],
   "autoupdate": true,
   "tools": {
     "write": true,
@@ -29,7 +31,9 @@
       "pytest *": "allow",
       "make *": "allow",
       "echo *": "allow",
-      "*": "ask"
+      "find *": "allow",
+      "sort *": "allow",
+      "cd *": "allow",
     },
     "external_directory": {
       "/tmp/**": "allow",
